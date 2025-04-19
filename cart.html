@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shopping Cart</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="css/cart.css">
+  <style>
+    
+  </style>
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+          <a class="navbar-brand" href="#">CampX</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav mx-auto">
+                  <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="item.html">Item</a></li>
+                  <li class="nav-item"><a class="nav-link" href="about us.html">About Us</a></li>
+                  <li class="nav-item"><a class="nav-link" href="contact us.html">Contact</a></li>
+              </ul>
+              <div class="d-flex align-items-center">
+                  <a href="cart.html" class="btn btn-outline-success me-2">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </a>
+                  <a href="login.html" class="btn btn-outline-primary">
+                    <i class="fa-solid fa-user"></i>
+                  </a>
+                </div>
+                
+                
+          </div>
+      </div>
+  </nav>
+  <!--nav-end-->
+   
+<div class="container my-5">
+  <div class="row g-4">
+    <!-- Cart Items -->
+    <div class="col-lg-8">
+      <div class="bg-white p-4 rounded shadow-sm">
+        <h4 class="mb-4">Your Cart</h4>
+
+        <!-- Item -->
+        <div id="cart-items-container"></div>
+
+      </div>
+    </div>
+
+    <!-- Order Summary -->
+    <div class="col-lg-4">
+      <div class="summary-box">
+        <h5 class="mb-3">Order Summary</h5>
+        <div class="mb-2 d-flex justify-content-between">
+          <span>Subtotal:</span>
+          <span id="subtotal">$0.00</span>
+        </div>
+        <div class="mb-2 d-flex justify-content-between">
+          <span>Shipping:</span>
+          <span id="shipping">$4.99</span>
+        </div>
+        <div class="mb-2 d-flex justify-content-between">
+          <span>Tax:</span>
+          <span id="tax">$27.00</span>
+        </div>
+        <div class="mb-3 d-flex justify-content-between">
+          <span>Discount:</span>
+          <span id="discount">-$0.00</span>
+        </div>
+
+        <div class="mb-3">
+          <input type="text" class="form-control form-control-sm" id="couponCode" placeholder="Enter coupon code">
+          <button class="btn btn-sm btn-outline-primary w-100 mt-2" onclick="applyDiscount()">Apply Coupon</button>
+        </div>
+
+        <hr>
+        <div class="d-flex justify-content-between fw-bold fs-5">
+          <span>Total:</span>
+          <span id="total">$0.00</span>
+        </div>
+        <button id="checkout-button" class="btn btn-success mt-3">Proceed to Checkout</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br><br>
+  <footer class="footer">
+      <div class="newsletter">
+          <h2>Join Our Newsletter</h2>
+          <p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>
+          <div class="newsletter-input">
+              <input type="email" placeholder="Your email address">
+              <button>Subscribe</button>
+          </div>
+      </div>
+  
+      <div class="footer-content">
+          <div class="footer-section about">
+              <h3>CampX</h3>
+              <p>"At CampX, our mission is to empower every outdoor adventure by providing high-quality, durable tents that combine comfort, innovation, and reliability—so you can explore the wild with confidence.</p>
+              <p><i class="fas fa-map-marker-alt"></i> 123 Fashion Street, New York, NY 10001</p>
+              <p><i class="fas fa-phone"></i> +95 890 123-4567</p>
+              <p><i class="fas fa-envelope"></i> enquiry@campX.com</p>
+          </div>
+  
+          <div class="footer-section links">
+              <h3>Item</h3>
+              <ul>
+                  <li><a href="item.html">New Arrivals</a></li>
+                  <li><a href="item.html">Bestsellers</a></li>
+                   </ul>
+          </div>
+  
+         
+  
+          <div class="footer-section links">
+              <h3>Company</h3>
+              <ul>
+                  <li><a href="about us.html">About Us</a></li>
+                  <li><a href="contact us.html">Contact Us</a></li>
+                  <li><a href="cart.html">Add to Cart</a></li>
+              </ul>
+          </div>
+  
+          <div class="footer-section app">
+              <h3>Follow Us On </h3>
+              <div class="social-icons">
+                  <i class="fab fa-facebook"></i>
+                  <i class="fab fa-instagram"></i>
+                  <i class="fab fa-x-twitter"></i>
+                  <i class="fab fa-tiktok"></i>
+                  <i class="fab fa-pinterest"></i>
+                  <i class="fab fa-youtube"></i>
+              </div>
+          </div>
+      </div>
+  
+      <div class="footer-bottom">
+          <p>We Accept: 
+              <i class="fab fa-cc-visa"></i> 
+              <i class="fab fa-cc-mastercard"></i> 
+              <i class="fab fa-cc-paypal"></i> 
+              <i class="fab fa-cc-apple-pay"></i> 
+              <i class="fab fa-cc-google-pay"></i>
+          </p>
+          <p>Terms of Service | Privacy Policy | Cookies Settings</p>
+          <p>© Copyright CampX. All Rights Reserved. Designed by Complex Myanmar</p>
+      </div>
+  </footer>
+<script>
+    function loadCart() {
+      const container = document.getElementById('cart-items-container');
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  
+      if (cart.length === 0) {
+        container.innerHTML = `<p class="text-muted">Your cart is empty.</p>`;
+        return;
+      }
+  
+      container.innerHTML = '';
+  
+      cart.forEach((item, index) => {
+        const itemTotal = (item.price * item.quantity).toFixed(2);
+  
+        const html = `
+          <div class="d-flex align-items-center border-bottom py-3 cart-item" data-index="${index}" data-price="${item.price}">
+            <img src="${item.imgSrc}" alt="" style="width: 60px;">
+            <div class="ms-3 flex-grow-1">
+              <h6 class="mb-1">${item.title}</h6>
+              <a href="#" class="text-danger small remove-btn">Remove</a>
+            </div>
+            <div class="input-group input-group-sm me-3" style="width: 110px;">
+              <button class="btn btn-outline-secondary qty-btn" onclick="changeQty(this, -1)">−</button>
+              <span class="form-control text-center qty">${item.quantity}</span>
+              <button class="btn btn-outline-secondary qty-btn" onclick="changeQty(this, 1)">+</button>
+            </div>
+            <div class="text-end">$<span class="item-total">${itemTotal}</span></div>
+          </div>
+        `;
+        container.innerHTML += html;
+      });
+  
+      calculateTotal();
+    }
+  
+    function changeQty(button, delta) {
+      const item = button.closest('.cart-item');
+      const index = item.dataset.index;
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  
+      cart[index].quantity += delta;
+      if (cart[index].quantity < 1) cart[index].quantity = 1;
+  
+      localStorage.setItem('cart', JSON.stringify(cart));
+      loadCart();
+    }
+  
+    function calculateTotal() {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      let subtotal = 0;
+  
+      cart.forEach(item => {
+        subtotal += item.price * item.quantity;
+      });
+  
+      const shipping = 4.99;
+      const tax = 27.00;
+      const discount = discountAmount;
+      const total = subtotal + shipping + tax - discount;
+  
+      document.getElementById('subtotal').textContent = `$${subtotal.toFixed(2)}`;
+      document.getElementById('tax').textContent = `$${tax.toFixed(2)}`;
+      document.getElementById('shipping').textContent = `$${shipping.toFixed(2)}`;
+      document.getElementById('discount').textContent = `-$${discount.toFixed(2)}`;
+      document.getElementById('total').textContent = `$${total.toFixed(2)}`;
+    }
+  
+    document.addEventListener('click', function (e) {
+      if (e.target.classList.contains('remove-btn')) {
+        e.preventDefault();
+        const index = e.target.closest('.cart-item').dataset.index;
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.splice(index, 1);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        loadCart();
+      }
+    });
+  
+    let discountAmount = 0;
+  
+    function applyDiscount() {
+      const code = document.getElementById('couponCode').value.trim();
+      if (code.toLowerCase() === "save10") {
+        discountAmount = 10.00;
+      } else {
+        discountAmount = 0;
+      }
+      calculateTotal();
+    }
+  
+    // Redirect to checkout page
+    document.getElementById('checkout-button').addEventListener('click', function() {
+      window.location.href = 'checkout.html';
+    });
+  
+    // Load on page load
+    loadCart();
+  </script>
+
+</body>
+</html>
+                                                                                                                                                                                                       t = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.splice(index, 1);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        loadCart();
+      }
+    });
+  
+    let discountAmount = 0;
+  
+    function applyDiscount() {
+      const code = document.getElementById('couponCode').value.trim();
+      if (code.toLowerCase() === "save10") {
+        discountAmount = 10.00;
+      } else {
+        discountAmount = 0;
+      }
+      calculateTotal();
+    }
+  
+    // Redirect to checkout page
+    document.getElementById('checkout-button').addEventListener('click', function() {
+      window.location.href = 'checkout.html';
+    });
+  
+    // Load on page load
+    loadCart();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CampX Login</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+  <!-- AOS Animation CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+<!-- Inside <head> -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+
+
+  <style>
+    body {
+      background-color: #00aaff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .login-wrapper {
+      background-color: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      max-width: 1000px;
+      margin: 50px auto;
+      display: flex;
+      min-height: 600px;
+    }
+    .login-left {
+      flex: 1;
+      background: url('img/signuppage.jpg') no-repeat center center;
+      background-size: cover;
+      color: white;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .login-left::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; bottom: 0; right: 0;
+      background: rgba(0, 0, 0, 0.4);
+    }
+    .login-left-content {
+      position: relative;
+      z-index: 1;
+      padding: 40px;
+      color: white;
+    }
+    .login-left h2 {
+      font-family: 'Brush Script MT', cursive;
+      font-size: 2.5rem;
+    }
+    .login-right {
+      flex: 1;
+      padding: 40px;
+    }
+    .social-btn {
+      width: 48px;
+      height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 10px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .social-btn:hover {
+      background-color: #f0f0f0;
+    }
+    .login-footer-icons img {
+      width: 40px;
+      margin-right: 10px;
+    }
+    .back-btn {
+      position: relative;
+      z-index: 2;
+      padding: 20px;
+    }
+    .back-btn a {
+      color: white;
+      font-size: 1.2rem;
+      text-decoration: none;
+    }
+    .back-btn a:hover {
+      text-decoration: underline;
+      color: #ddd;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="login-wrapper">
+    
+    <!-- Left Panel with Back Button -->
+    <div class="login-left" data-aos="fade-right">
+      <div class="back-btn">
+        <a href="index.html"><i class="bi bi-arrow-left"></i></a>
+      </div>
+      <div class="login-left-content">
+       
+        <h2>CampX</h2>
+        <p>Camp Anywhere Travel Everywhere</p>
+      </div>
+    </div>
+
+    <!-- Right Panel -->
+    <div class="login-right d-flex flex-column justify-content-center">
+      <div class="text-center mb-4">
+        <h3 class="fw-bold text-primary">Sign Up</h3>
+        <p class="text-muted">Create Your Account</p>
+      </div>
+
+      <form action="signup_process.php" method="POST" data-aos="fade-up">
+
+
+        <div class="mb-3">
+          <label class="form-label">Username</label>
+          <input type="text" class="form-control" name="username" placeholder="Enter Your Username" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Username</label>
+          <input type="email" class="form-control" name="email" placeholder="Enter Your Email" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Location</label>
+            <input type="text" class="form-control" name="location" placeholder="Enter Your Location" required>
+          </div>
+        <div class="mb-3">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-control" name="password" placeholder="Create A Password" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Confirm Password</label>
+            <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Your Password" required>
+          </div>
+        <div class="d-grid mb-3">
+          <button type="submit" class="btn btn-primary">LOGIN</button>
+        </div>
+      </form>
+
+      <div class="text-center mb-4" data-aos="fade-down">
+
+        <p class="text-muted">OR</p>
+        <div class="d-flex justify-content-center mb-3" data-aos="zoom-in">
+          <div class="social-btn"><img src="img/Googlelogo.webp" width="30px" height="30" alt="Google"/></div>
+          <div class="social-btn"><img src="img/facebooklogo.webp" width="30px" height="30px" alt="Facebook"/></div>
+          <div class="social-btn"><img src="img/apple logo.svg" width="30px" height="35px" alt="Apple"/></div>
+        </div>
+        <p class="small">Already have an account? <a href="login.html" class="text-decoration-none text-primary">Log In</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- AOS Animation JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // animation duration in ms
+    once: true,     // only animate once
+  });
+</script>
+
+</body>
+</html>

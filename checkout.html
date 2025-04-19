@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Added Font Awesome for icons -->
+    <link rel="stylesheet" href="css/checkout.css">
+    <style>
+      
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="checkout-container">
+                <i class="fas fa-arrow-left back-btn" onclick="window.history.back();"></i> <!-- Back button with an icon -->
+
+                <h2 class="text-center mb-4">Checkout</h2>
+                <form id="checkout-form">
+                    <!-- User Information -->
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="address" class="form-label">Shipping Address</label>
+                        <input type="text" class="form-control" id="address" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+
+                    <!-- Payment Method -->
+                    <div class="mb-4">
+                        <h5>Payment Method</h5>
+                        <div class="payment-methods">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="paymentMethod" id="visa" value="Visa" required>
+                                <label class="form-check-label" for="visa">
+                                    <!--img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo_2014.svg" alt="Visa"--> Visa
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="paymentMethod" id="paypal" value="PayPal" required>
+                                <label class="form-check-label" for="paypal">
+                                    <!--img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/PayPal_logo_2014.svg" alt="PayPal"--> PayPal
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="paymentMethod" id="mastercard" value="MasterCard" required>
+                                <label class="form-check-label" for="mastercard">
+                                    <!--img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Mastercard-logo.svg" alt="MasterCard"--> MasterCard
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Total Amount -->
+                    <div class="total-amount">
+                        <span>Total: </span><span id="total-amount">$0.00</span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100 mt-4">Complete Checkout</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br>
+<footer class="footer">
+    <div class="newsletter">
+        <h2>Join Our Newsletter</h2>
+        <p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>
+        <div class="newsletter-input">
+            <input type="email" placeholder="Your email address">
+            <button>Subscribe</button>
+        </div>
+    </div>
+
+    <div class="footer-content">
+        <div class="footer-section about">
+            <h3>eStore</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in nibh vehicula, facilisis magna ut, consectetur lorem.</p>
+            <p><i class="fas fa-map-marker-alt"></i> 123 Fashion Street, New York, NY 10001</p>
+            <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+            <p><i class="fas fa-envelope"></i> hello@example.com</p>
+        </div>
+
+        <div class="footer-section links">
+            <h3>Shop</h3>
+            <ul>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Bestsellers</a></li>
+                <li><a href="#">Women's Clothing</a></li>
+                <li><a href="#">Men's Clothing</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Sale</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section links">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Order Status</a></li>
+                <li><a href="#">Shipping Info</a></li>
+                <li><a href="#">Returns & Exchanges</a></li>
+                <li><a href="#">Size Guide</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section links">
+            <h3>Company</h3>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Press</a></li>
+                <li><a href="#">Affiliates</a></li>
+                <li><a href="#">Responsibility</a></li>
+                <li><a href="#">Investors</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section app">
+            <h3>Download Our App</h3>
+            <button class="app-store">App Store</button>
+            <button class="play-store">Google Play</button>
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-x-twitter"></i>
+                <i class="fab fa-tiktok"></i>
+                <i class="fab fa-pinterest"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>We Accept: 
+            <i class="fab fa-cc-visa"></i> 
+            <i class="fab fa-cc-mastercard"></i> 
+            <i class="fab fa-cc-paypal"></i> 
+            <i class="fab fa-cc-apple-pay"></i> 
+            <i class="fab fa-cc-google-pay"></i>
+        </p>
+        <p>Terms of Service | Privacy Policy | Cookies Settings</p>
+        <p>© Copyright eStore. All Rights Reserved. Designed by BootstrapMade</p>
+    </div>
+</footer>
+<script>
+    // Load the cart data and calculate the total
+    function loadCart() {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let subtotal = 0;
+
+        cart.forEach(item => {
+            subtotal += item.price * item.quantity;
+        });
+
+        const shipping = 4.99;
+        const tax = 27.00;
+        const discount = 0; // Assuming no discount
+        const total = subtotal + shipping + tax - discount;
+
+        // Update the total in checkout page
+        document.getElementById('total-amount').textContent = `$${total.toFixed(2)}`;
+    }
+
+    document.getElementById('checkout-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const address = document.getElementById('address').value;
+        const email = document.getElementById('email').value;
+        const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked')?.value;
+
+        if (name && address && email && paymentMethod) {
+          alert('Thank you for ordering ' + name + ', We will send the details to ' + email);
+
+            // Optionally, clear the cart after successful checkout
+            localStorage.removeItem('cart');
+            window.location.href = 'thankyou.html'; // Redirect to a thank you page
+        } else {
+            alert('Please fill in all fields and select a payment method!');
+        }
+    });
+
+    // Load the cart data when the page loads
+    window.onload = function () {
+        loadCart();
+    };
+</script>
+
+</body>
+</html>

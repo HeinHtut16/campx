@@ -1,0 +1,200 @@
+body {
+    background-color: #f8f9fa;
+  }
+  .cart-item img {
+    width: 60px;
+  }
+  .qty-btn {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    line-height: 1;
+  }
+  .summary-box {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.05);
+  }
+
+  
+.footer {
+    background: #f8f9fa;
+    padding: 50px 20px;
+    text-align: center;
+    }
+    
+    .newsletter {
+    padding-bottom: 30px;
+    }
+    
+    .newsletter h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    }
+    
+    .newsletter-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    }
+    
+    .newsletter-input input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    }
+    
+    .newsletter-input button {
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+    
+    .testimonials-section {
+        background: #f9f9f9;
+        padding: 50px 20px;
+        text-align: center;
+        position: relative;
+      }
+      
+      .testimonial-slider {
+        max-width: 700px;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        min-height: 200px;
+      }
+      
+      .testimonial-card {
+        display: none;
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+      }
+      
+      .testimonial-card.active {
+        display: block;
+        animation: fadeInUp 0.6s ease;
+      }
+      
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      .testimonial-card p {
+        font-size: 1.1rem;
+        color: #555;
+        margin-bottom: 15px;
+      }
+      
+      .testimonial-card h5 {
+        font-weight: bold;
+        color: #333;
+      }
+      
+      .testimonial-controls {
+        margin-top: 20px;
+      }
+      
+      .testimonial-controls button {
+        background-color: #5fbe7a;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        font-size: 18px;
+        border-radius: 50%;
+        margin: 0 10px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      
+      .testimonial-controls button:hover {
+        background-color: #49a764;
+      }
+      
+    .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: left;
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 20px;
+    }
+    
+    .footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+    }
+    
+    .footer-section h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    }
+    
+    .footer-section p,
+    .footer-section ul {
+    font-size: 14px;
+    color: #6c757d;
+    }
+    
+    .footer-section ul {
+    list-style: none;
+    padding: 0;
+    }
+    
+    .footer-section ul li {
+    margin-bottom: 8px;
+    }
+    
+    .footer-section ul li a {
+    color: #007bff;
+    text-decoration: none;
+    }
+    
+    .footer-section .app-store,
+    .footer-section .play-store {
+    display: block;
+    padding: 8px;
+    margin-top: 10px;
+    background: #000;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    }
+    
+    .footer-section .social-icons i {
+    font-size: 18px;
+    margin-right: 10px;
+    color: #007bff;
+    }
+    
+    .footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    color: #6c757d;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+    }
+    
